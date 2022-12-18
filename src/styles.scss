@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Quicksand:wght@300;400;600;700&display=swap');
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+// global rules 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within,
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth !important;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: smooth;
+}
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: smooth !important;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+//vars
+$back-ground-color:#f1efe3;
+
+.App {
+    background-color: $back-ground-color;
+    .cards {
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        padding: 40px;
+        .card {
+            background-image: url('');
+            position: relative;
+            width: 200px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 15px;
+            transition: 0.3s;
+            overflow: hidden;
+            div {
+                height: 250px;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+                background-position: center;
+                background-size: cover;
+            }
+            .anime-name {
+                width: 100%;
+                text-align: center;
+                height: 50px;
+                overflow: hidden;
+            }
+            .other-info {
+                margin-left: 30px;
+                span {
+                    font-weight: 800;
+                }
+            }
+            .rank {
+                position: absolute;
+                z-index: 3;
+                background-color: #d965a9;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0 15px 0 0;
+                top: 0;
+                right: 0;
+            }
+        }
+        .active {
+            // transform: scale(1.5);
+            height: 420px;
+            width: 300px;
+            z-index: 999;
+        }
+    }
+    .chart {
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
